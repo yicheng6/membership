@@ -31,7 +31,7 @@ import java.util.Collection;
  * @author Ken Krebs
  * @author Arjen Poutsma
  */
-@Controller
+//@Controller
 @RequestMapping("/owners/{ownerId}")
 class PetController {
 

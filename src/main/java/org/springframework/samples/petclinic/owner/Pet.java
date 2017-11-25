@@ -47,7 +47,7 @@ import org.springframework.samples.petclinic.visit.Visit;
  * @author Juergen Hoeller
  * @author Sam Brannen
  */
-@Entity
+//@Entity
 @Table(name = "pets")
 public class Pet extends NamedEntity {
 

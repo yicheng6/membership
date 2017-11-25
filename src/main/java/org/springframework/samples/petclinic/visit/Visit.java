@@ -33,7 +33,7 @@ import org.springframework.samples.petclinic.model.BaseEntity;
  * @author Ken Krebs
  * @author Dave Syer
  */
-@Entity
+//@Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {
 

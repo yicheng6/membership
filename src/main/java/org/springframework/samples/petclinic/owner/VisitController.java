@@ -33,7 +33,7 @@ import java.util.Map;
  * @author Michael Isvy
  * @author Dave Syer
  */
-@Controller
+//@Controller
 class VisitController {
 
     private final VisitRepository visits;

@@ -35,7 +35,7 @@ import org.springframework.stereotype.Component;
  * @author Juergen Hoeller
  * @author Michael Isvy
  */
-@Component
+//@Component
 public class PetTypeFormatter implements Formatter<PetType> {
 
     private final PetRepository pets;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'students')}">
+
+  <body>
+
+    <h2>花名册</h2>
+
+    <table id="vets" class="table table-striped">
+        <thead>
+        <tr>
+            <th style="width: 150px;">学号</th>
+            <th style="width: 150px;">姓名</th>
+            <th style="width: 100px;">性别</th>
+            <th style="width: 150px;">年级</th>
+            <th style="width: 150px;">专业</th>
+            <th style="width: 150px;">班级</th>
+            <th style="width: 200px;">身份证</th>
+            <th style="width: 120px">手机号</th>
+            <th style="width: 200px">备注</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="student : ${selections}">
+          	  <td th:text="${student.number}"/>
+              <td>
+                  <a th:href="@{/students/__${student.id}__}" th:text="${student.name}"/></a>
+              </td>
+              <td th:text="${student.sex}"/>
+              <td th:text="${student.grade}"/>
+              <td th:text="${student.major}"/>
+              <td th:text="${student.className}"/>
+              <td th:text="${student.idCard}"/>
+              <td th:text="${student.moblie}"/>
+              <td th:text="${student.remark}"/>
+          </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>

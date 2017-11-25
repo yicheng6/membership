@@ -31,7 +31,8 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public interface OwnerRepository extends Repository<Owner, Integer> {
+//public interface OwnerRepository extends Repository<Owner, Integer> {
+public interface OwnerRepository {
 
     /**
      * Retrieve {@link Owner}s from the data store by last name, returning all owners
