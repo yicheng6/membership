@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{fragments/layout :: layout (~{::body},'students')}">
+
+<body>
+
+  <h2>学生管理</h2>
+  <form th:object="${student}" class="form-horizontal" id="add-student-form" method="post">
+    <div class="form-group has-feedback">
+      <input
+        th:replace="~{fragments/inputField :: input ('学号', 'number')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('姓名', 'name')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('性别', 'sex')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('年级', 'grade')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('专业', 'major')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('班级', 'className')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('身份证', 'idCard')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('手机号', 'moblie')}" />
+      <input
+        th:replace="~{fragments/inputField :: input ('备注', 'remark')}" />
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button
+          th:with="text=${student['new']} ? '添加学生' : '编辑学生'"
+          class="btn btn-default" type="submit" th:text="${text}">添加学生</button>
+        <a th:href="@{/students}" class="btn btn-default">返回列表</a>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

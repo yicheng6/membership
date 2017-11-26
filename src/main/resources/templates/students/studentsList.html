@@ -4,7 +4,7 @@
 
   <body>
 
-    <h2>花名册</h2>
+    <h2>花名册<a th:href="@{/students/new}" class="btn btn-default" style="float: right; margin-bottom: 5px; margin-right:10px;">添加学生</a></h2>
 
     <table id="vets" class="table table-striped">
         <thead>
@@ -18,6 +18,7 @@
             <th style="width: 200px;">身份证</th>
             <th style="width: 120px">手机号</th>
             <th style="width: 200px">备注</th>
+            <th style="width: 100px">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -33,6 +34,9 @@
               <td th:text="${student.idCard}"/>
               <td th:text="${student.moblie}"/>
               <td th:text="${student.remark}"/>
+              <td>
+                  <a th:href="@{/students/__${student.id}__/delete}" class="btn btn-danger btn-xs">删除</a>
+              </td>
           </tr>
         </tbody>
     </table>

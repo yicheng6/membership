@@ -43,7 +43,6 @@ public class Student extends BaseEntity {
 	private String moblie;
 	
 	@Column(name = "remark")
-    @NotEmpty
 	private String remark;
 
 	public String getNumber() {
